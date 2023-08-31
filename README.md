@@ -51,14 +51,6 @@ Create an empty Git repository or reinitialize an existing one.
 git init
 ```
 
-### Clone repository recursively
-
-Clone a repository and submodules. *2.13+*
-
-```
-git clone --recurse-submodules $GIT_URL
-```
-
 ## Branch & Merge
 
 Whether you're working by yourself or on a team, you should have a repository work flow
@@ -106,6 +98,14 @@ make use.
 ## Advanced Topics
 
 Rebasing, cherry-picking, and managing submodules.
+
+### Clone repository recursively
+
+Clone a repository and submodules. *2.13+*
+
+```
+git clone --recurse-submodules $GIT_URL
+```
 
 ## Best Practices
 
