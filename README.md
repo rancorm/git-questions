@@ -12,8 +12,13 @@ Pull requests are welcome.
   - [Basics](#basics)
   - [Workflow](#workflow)
   - [Branch & Merge](#branch--merge)
+  - [Collaboration & Remote Repositories](#collaboration--remote-repositories)
   - [Advanced Topics](#advanced-topics)
   - [Best Practices](#best-practices)
+  - [Tools & Extensions](#tools--extensions)
+  - [Tips & Troubleshooting](#tips--troubleshooting)
+  - [Continuous Integration & Deployment](#continuous-integration--deployment)
+  - [Security & Access Control](#security--access-control)
 
 ## Setting Up
 To make copy and pasting easier, set the environment variable `GIT_URL` and friends to their respective
@@ -80,5 +85,19 @@ git push -u origin $GIT_BRANCH
 The `-u` flag tells Git to establish a tracking connection, which will make push and pull much
 easier in the future.
 
+## Workflow
+## Collaboration & Remote Repositories
 ## Advanced Topics
 Rebasing, cherry-picking, and managing submodules.
+
+## Best Practices
+
+### Commit Messages
+Commit messages should being with a short description of 50 character limit on the first line.
+
+Followed by a single blank line with each following line a description of the changes in the commit.
+
+## Tools & Extensions
+## Tips & Troubleshooting
+## Continuous Integration & Deployment
+## Security & Access Control
