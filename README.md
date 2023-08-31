@@ -70,7 +70,7 @@ New local branch based on HEAD.
 git branch $GIT_BRANCH
 ```
 
-### Branch from existing branch
+### Branch from an existing branch
 
 New local branch from existing branch.
 
@@ -87,7 +87,7 @@ you can provide the commit hash or tag name as the starting point.
 git branch $GIT_BRANCH $GIT_COMMIT
 ```
 
-### Branch a remote repository
+### Branch from a remote repository
 
 After working on your new local branch for some time, you might want to publish it in your
 remote repository, to share it with your team:
@@ -114,5 +114,24 @@ by a single blank line with each following line a description of the changes in 
 
 ## Tools & Extensions
 ## Tips & Troubleshooting
+
 ## Continuous Integration & Deployment
+
+### Shallow clone
+
+Perform a shallow clone when the repository history isn't a requirement and the clone with be
+discarded.
+
+```
+git clone --depth=1 $GIT_URL
+```
+
+### Shallow clone a specific branch
+
+Perform a shallow clone when 
+
+```
+git clone --depth=1 --single-branch --branch=$GIT_BRANCH $GIT_URL
+```
+
 ## Security & Access Control
