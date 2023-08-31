@@ -28,7 +28,9 @@ Pull requests are welcome.
 ## Setting Up
 
 To make copy and pasting easier, set the environment variable `GIT_URL` and friends to their respective
-values. Example:
+values.
+
+Example:
 
 ```
 export GIT_URL=https://github.com/jcormir/git-questions.git
@@ -39,7 +41,7 @@ export GIT_COMMIT=c8e491e
 
 ## Basics
 
-Branching, merging, and committing is a large part of what Git does.
+Setup new repostories, clone existing ones, and just getting to know Git.
 
 ### Create a new repository
 
@@ -96,8 +98,8 @@ remote repository, to share it with your team:
 git push -u origin $GIT_BRANCH
 ```
 
-The `-u` flag tells Git to establish a tracking connection, which will make push and pull much
-easier in the future.
+The `-u` or `--set-upstream` tells Git to establish a tracking reference, which argument-less **git-pull** and other commands
+make use.
 
 ## Workflow
 ## Collaboration & Remote Repositories
@@ -116,6 +118,8 @@ by a single blank line with each following line a description of the changes in 
 ## Tips & Troubleshooting
 
 ## Continuous Integration & Deployment
+
+Shallow clones aren't recommended for developers.
 
 ### Shallow clone
 
