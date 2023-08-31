@@ -1,7 +1,7 @@
 ![Cover Image](cover.jpg)
 
 # Git Questions
-Inside this repository, you'll find an extensive collection of meticulously curated Git questions and answers. From the fundamental concepts like branching, merging, and committing to advanced topics such as rebasing, cherry-picking, and managing submodules, we've got you covered.
+Inside this repository, you'll find an extensive collection of meticulously curated Git questions and answers. From the fundamental concepts like branching, merging, and committing to advanced topics such as rebasing, cherry-picking, and submodules, we've got you covered.
 
 ## Contribute
 Pull requests are welcome.
@@ -16,14 +16,18 @@ Pull requests are welcome.
   - [Best Practices](#best-practices)
 
 ## Setting Up
-Configuring user information and settings. Basic global and repository-specific configurations.
-
-## Basics
-To make copy and pasting easier, set the environment variable `GIT_URL` to the repository URL.
+To make copy and pasting easier, set the environment variable `GIT_URL` and friends to their respective
+values. Example:
 
 ```
 export GIT_URL=https://github.com/jcormir/git-questions.git
+export GIT_BRANCH=awesome-branch
+export GIT_TAG=v1.0
+export GIT_COMMIT=c8e491e
 ```
+
+## Basics
+Branching, merging, and committing is a large part of what Git does.
 
 ### Create a new repository
 Create an empty Git repository or reinitialize an existing one.
