@@ -37,6 +37,7 @@ export GIT_URL=https://github.com/jcormir/git-questions.git
 export GIT_BRANCH=awesome-branch
 export GIT_TAG=v1.0
 export GIT_COMMIT=c8e491e
+export GIT_REPO=git-questions
 ```
 
 ## Basics
@@ -48,7 +49,7 @@ Setup new repostories, clone existing ones, and just getting to know Git.
 Create an empty Git repository or reinitialize an existing one.
 
 ```
-git init
+git init $GIT_REPO
 ```
 
 ## Branch & Merge
