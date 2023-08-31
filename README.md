@@ -15,8 +15,8 @@ Pull requests are welcome.
 - [Git Questions](#git-questions)
   - [Setting Up](#setting-up)
   - [Basics](#basics)
-  - [Workflow](#workflow)
   - [Branch & Merge](#branch--merge)
+  - [Workflow](#workflow) 
   - [Collaboration & Remote Repositories](#collaboration--remote-repositories)
   - [Advanced Topics](#advanced-topics)
   - [Best Practices](#best-practices)
@@ -50,6 +50,22 @@ Create an empty Git repository or reinitialize an existing one.
 
 ```
 git init $GIT_REPO
+```
+
+Running `git init` in an existing repository is safe. It will not overwrite things that
+are already there.
+
+### Ignore files
+
+The repository file `.gitignore` is a configuration file used in Git repositories to specify
+files and directories that should be excluded from version control.
+
+Example that excludes C objects, Python compiled bytecode, and directory named `build`.
+
+```
+*.pyc
+*.o
+build/
 ```
 
 ## Branch & Merge
