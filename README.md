@@ -8,11 +8,17 @@ Pull requests are welcome.
 
 ## Table of Contents
 - [Git Questions](#git-questions)
-  - [Getting Started](#getting-started)
+  - [Setting Up](#setting-up)
+  - [Basics](#basics)
+  - [Workflow](#workflow)
   - [Branch & Merge](#branch--merge)
   - [Advanced Topics](#advanced-topics)
+  - [Best Practices](#best-practices)
 
-## Getting Started
+## Setting Up
+Configuring user information and settings. Basic global and repository-specific configurations.
+
+## Basics
 To make copy and pasting easier, set the environment variable `GIT_URL` to the repository URL.
 
 ```
