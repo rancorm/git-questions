@@ -60,7 +60,7 @@ are already there.
 The repository file `.gitignore` is a configuration file used in Git repositories to specify
 files and directories that should be excluded from version control.
 
-Example that excludes C objects, Python compiled bytecode, and directory named `build`.
+Example that excludes C objects (.o), Python compiled bytecode (.pyc), and directory named `build`.
 
 ```
 *.pyc
@@ -111,6 +111,22 @@ The `-u` or `--set-upstream` tells Git to establish a tracking reference, which 
 make use.
 
 ## Workflow
+
+### What revision last modified a line of a file
+
+If you're looking for the revision and author that last modified each line of a 
+file, the `git blame` command does exactly that.
+
+```
+git blame
+```
+
+If you would like to limit the output to a line range use the `-L` argument.
+
+```
+git blame -L 26,28
+```
+
 ## Collaboration & Remote Repositories
 ## Advanced Topics
 
