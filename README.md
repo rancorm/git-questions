@@ -32,7 +32,7 @@ values.
 
 Example:
 
-```
+```sh
 export GIT_URL=https://github.com/jcormir/git-questions.git
 export GIT_BRANCH=awesome-branch
 export GIT_TAG=v1.0
@@ -48,7 +48,7 @@ Setup new repostories, clone existing ones, and just getting to know Git.
 
 Create an empty Git repository or reinitialize an existing one.
 
-```
+```sh
 git init $GIT_REPO
 ```
 
@@ -77,7 +77,7 @@ that involves merging branches. Feature branches, long term release branches, et
 
 New local branch based on HEAD.
 
-```
+```sh
 git branch $GIT_BRANCH
 ```
 
@@ -85,7 +85,7 @@ git branch $GIT_BRANCH
 
 New local branch from existing branch.
 
-```
+```sh
 git branch $GIT_BRANCH <base-branch>
 ```
 
@@ -94,7 +94,7 @@ git branch $GIT_BRANCH <base-branch>
 If you want to start your new local branch based on a specific commit or tag, then
 you can provide the commit hash or tag name as the starting point.
 
-```
+```sh
 git branch $GIT_BRANCH $GIT_COMMIT
 ```
 
@@ -103,7 +103,7 @@ git branch $GIT_BRANCH $GIT_COMMIT
 After working on your new local branch for some time, you might want to publish it in your
 remote repository, to share it with your team:
 
-```
+```sh
 git push -u origin $GIT_BRANCH
 ```
 
@@ -112,20 +112,43 @@ make use.
 
 ## Workflow
 
+Commands you will use throughout the development day.
+
 ### What revision last modified a line of a file
 
 If you're looking for the revision and author that last modified each line of a 
 file, the `git blame` command does exactly that.
 
-```
+```sh
 git blame
 ```
 
 If you would like to limit the output to a line range use the `-L` argument.
 
-```
+```sh
 git blame -L 26,28
 ```
+
+### Looking through repository history
+
+To pick through the repository commit history use `git log`.
+
+List commits that are reachable by following the parent from the given commit(s), but
+exclude commits that are reachable from the one(s) with a prefix of `^`.
+
+```sh
+git log
+```
+
+The output is given in reverse chronological order.
+
+```sh
+commit 0113f8d73745c3cda3a32360772f6055828012d3 (HEAD -> main, origin/main, origin/HEAD)
+Author: Jonathan Cormier <jonathan@cormier.co>
+Date:   Sun Sep 3 22:05:35 2023 -0300
+```
+
+If you want basic one line commit descriptions you can use `--oneline` argument.
 
 ## Collaboration & Remote Repositories
 ## Advanced Topics
@@ -136,7 +159,7 @@ Rebasing, cherry-picking, and managing submodules.
 
 Clone a repository and submodules. *2.13+*
 
-```
+```sh
 git clone --recurse-submodules $GIT_URL
 ```
 
@@ -159,7 +182,7 @@ Shallow clones aren't recommended for developers.
 Perform a shallow clone when the repository history isn't a requirement and the clone with be
 discarded.
 
-```
+```sh
 git clone --depth=1 $GIT_URL
 ```
 
@@ -167,7 +190,7 @@ git clone --depth=1 $GIT_URL
 
 Perform a shallow clone when 
 
-```
+```sh
 git clone --depth=1 --single-branch --branch=$GIT_BRANCH $GIT_URL
 ```
 
