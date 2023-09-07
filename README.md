@@ -62,11 +62,11 @@ files and directories that should be excluded from version control.
 
 Example that excludes C objects (.o), Python compiled bytecode (.pyc), and directory named `build`.
 
-```
+\```
 *.pyc
 *.o
 build/
-```
+\```
 
 ## Branch & Merge
 
