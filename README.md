@@ -151,6 +151,15 @@ Date:   Sun Sep 3 22:05:35 2023 -0300
 If you want basic one line commit descriptions you can use `--oneline` argument.
 
 ## Collaboration & Remote Repositories
+
+### List remote repositories
+
+To list the set of repositories and their location.
+
+```sh
+git remote -v
+```
+
 ## Advanced Topics
 
 Rebasing, cherry-picking, and managing submodules.
