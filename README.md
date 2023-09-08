@@ -209,8 +209,6 @@ git clone --recurse-submodules $GIT_URL
 
 ## Best Practices
 
-### Commit Messages
-
 - Commit messages should being with a short description of 50 character limit on the first line. Followed
 by a single blank line with each following line a description of the changes in the commit.
 - Always pull before a push to make sure you will not face any rejections from Git.
@@ -218,6 +216,9 @@ by a single blank line with each following line a description of the changes in 
 branch up-to-date and reduce the chances of conflicts.
 
 ## Tools & Extensions
+
+- [Meld](https://meldmerge.org)
+
 ## Tips & Troubleshooting
 
 ## Continuous Integration & Deployment
