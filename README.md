@@ -114,6 +114,14 @@ make use.
 
 Commands you will use throughout the development day.
 
+### Add file or changes to commit
+
+To track a file or add changes that are yet apart of a commit.
+
+```sh
+git add file.txt
+```
+
 ### What revision last modified a line of a file
 
 If you're looking for the revision and author that last modified each line of a 
@@ -149,6 +157,20 @@ Date:   Sun Sep 3 22:05:35 2023 -0300
 ```
 
 If you want basic one line commit descriptions you can use `--oneline` argument.
+
+### Commit changes
+
+Once you have your changes staged for commit using `git add`. You need to commit.
+
+```sh
+git commit -m "Message"
+```
+
+To have your changes available through remotes, you need to push them.
+
+```sh
+git push
+```
 
 ## Collaboration & Remote Repositories
 
