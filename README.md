@@ -107,8 +107,8 @@ remote repository, to share it with your team:
 git push -u origin $GIT_BRANCH
 ```
 
-The `-u` or `--set-upstream` tells Git to establish a tracking reference, which argument-less **git-pull** and other commands
-make use.
+The `-u` or `--set-upstream` tells Git to establish a tracking reference, which argument-less
+**git-pull** and other commands make use.
 
 ## Workflow
 
@@ -158,6 +158,16 @@ Date:   Sun Sep 3 22:05:35 2023 -0300
 
 If you want basic one line commit descriptions you can use `--oneline` argument.
 
+To narrow the output a special notation `<commit1>..<commit2>` can be used as a short-hand
+for `^<commit1> <commit2>`. For example, either of the following may be used interchangeably:
+
+```sh
+git log origin..HEAD
+git log HEAD ^origin
+```
+
+`HEAD` is a reference to the latest commit in the repository.
+
 ### Commit changes
 
 Once you have your changes staged for commit using `git add`. You need to commit.
@@ -165,6 +175,9 @@ Once you have your changes staged for commit using `git add`. You need to commit
 ```sh
 git commit -m "Message"
 ```
+
+You can make multiple commits before you push them to a remote, if the situation
+calls for it.
 
 To have your changes available through remotes, you need to push them.
 
@@ -198,8 +211,9 @@ git clone --recurse-submodules $GIT_URL
 
 ### Commit Messages
 
-Commit messages should being with a short description of 50 character limit on the first line. Followed
+- Commit messages should being with a short description of 50 character limit on the first line. Followed
 by a single blank line with each following line a description of the changes in the commit.
+- Always pull before a push to make sure you will not face any rejections from Git.
 
 ## Tools & Extensions
 ## Tips & Troubleshooting
