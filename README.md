@@ -33,11 +33,13 @@ values.
 Example:
 
 ```sh
-export GIT_URL=https://github.com/jcormir/git-questions.git
-export GIT_BRANCH=awesome-branch
-export GIT_TAG=v1.0
-export GIT_COMMIT=c8e491e
-export GIT_REPO=git-questions
+export GQ_URL=https://github.com/jcormir/git-questions.git
+export GQ_BRANCH=awesome-branch
+export GQ_TAG=v1.0
+export GQ_COMMIT=c8e491e
+export GQ_REPO=git-questions
+export GQ_FILE=file.txt
+export GQ_DIR=a_directory/
 ```
 
 ## Basics
@@ -49,7 +51,7 @@ Setup new repostories, clone existing ones, and just getting to know Git.
 Create an empty Git repository or reinitialize an existing one.
 
 ```sh
-git init $GIT_REPO
+git init $GQ_REPO
 ```
 
 Running `git init` in an existing repository is safe. It will not overwrite things that
@@ -60,7 +62,7 @@ are already there.
 To clone an already existing repository.
 
 ```sh
-git clone $GIT_URL
+git clone $GQ_URL
 ```
 
 ### Ignore files
@@ -86,7 +88,7 @@ that involves merging branches. Feature branches, long term release branches, et
 New local branch based on HEAD.
 
 ```sh
-git branch $GIT_BRANCH
+git branch $GQ_BRANCH
 ```
 
 ### Switch repository branch
@@ -94,7 +96,7 @@ git branch $GIT_BRANCH
 Switch repository branch.
 
 ```sh
-git switch $GIT_BRANCH
+git switch $GQ_BRANCH
 ```
 
 ### Branch from an existing branch
@@ -102,7 +104,7 @@ git switch $GIT_BRANCH
 New local branch from existing branch.
 
 ```sh
-git branch $GIT_BRANCH <base-branch>
+git branch $GQ_BRANCH <base-branch>
 ```
 
 ### Branch from a specific commit or tag
@@ -111,7 +113,7 @@ If you want to start your new local branch based on a specific commit or tag, th
 you can provide the commit hash or tag name as the starting point.
 
 ```sh
-git branch $GIT_BRANCH $GIT_COMMIT
+git branch $GQ_BRANCH $GQ_COMMIT
 ```
 
 ### Push local branch to remote repository
@@ -120,7 +122,7 @@ After working on your new local branch for some time, you might want to publish 
 remote repository, to share it with your team:
 
 ```sh
-git push -u origin $GIT_BRANCH
+git push -u origin $GQ_BRANCH
 ```
 
 The `-u` or `--set-upstream` tells Git to establish a tracking reference, which argument-less
@@ -135,7 +137,7 @@ Commands you will use throughout the development day.
 To track a file or add changes that are yet apart of a commit.
 
 ```sh
-git add file.txt
+git add $GQ_FILE
 ```
 
 ### Unstage a file or directory
@@ -143,13 +145,13 @@ git add file.txt
 If you need to remove a file from the staging area.
 
 ```sh
-git reset HEAD -- <file>
+git reset HEAD -- $GQ_FILE
 ```
 
 If you need to remove a directory from the staging area.
 
 ```sh
-git reset HEAD -- <directory>
+git reset HEAD -- $GQ_DIR
 ```
 
 Your changes will be kept. When you run `git status` the file will once again show up as
@@ -267,7 +269,7 @@ Rebasing, cherry-picking, and managing submodules.
 Clone a repository and submodules. *2.13+*
 
 ```sh
-git clone --recurse-submodules $GIT_URL
+git clone --recurse-submodules $GQ_URL
 ```
 
 ## Best Practices
@@ -294,7 +296,7 @@ Perform a shallow clone when the repository history isn't a requirement and the 
 discarded.
 
 ```sh
-git clone --depth=1 $GIT_URL
+git clone --depth=1 $GQ_URL
 ```
 
 ### Shallow clone a specific branch
@@ -302,7 +304,7 @@ git clone --depth=1 $GIT_URL
 Perform a shallow clone when 
 
 ```sh
-git clone --depth=1 --single-branch --branch=$GIT_BRANCH $GIT_URL
+git clone --depth=1 --single-branch --branch=$GQ_BRANCH $GQ_URL
 ```
 
 ## Security & Access Control
