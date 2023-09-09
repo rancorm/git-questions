@@ -138,6 +138,23 @@ To track a file or add changes that are yet apart of a commit.
 git add file.txt
 ```
 
+### Unstage a file or directory
+
+If you need to remove a file from the staging area.
+
+```sh
+git reset HEAD -- <file>
+```
+
+If you need to remove a directory from the staging area.
+
+```sh
+git reset HEAD -- <directory>
+```
+
+Your changes will be kept. When you run `git status` the file will once again show up as
+modified but not yet staged.
+
 ### What revision last modified a line of a file
 
 If you're looking for the revision and author that last modified each line of a 
