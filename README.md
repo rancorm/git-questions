@@ -286,6 +286,14 @@ branch up-to-date and reduce the chances of conflicts.
 
 ## Tips & Troubleshooting
 
+### Change Conflict Style
+
+Change conflict style to zealous diff3, `zdiff3`.
+
+```ini
+merge.conflictStyle = zdiff3
+```
+
 ## Continuous Integration & Deployment
 
 Shallow clones aren't recommended for developers.
@@ -301,7 +309,7 @@ git clone --depth=1 $GQ_URL
 
 ### Shallow clone a specific branch
 
-Perform a shallow clone when 
+Perform the same shallow only on a specific branch.
 
 ```sh
 git clone --depth=1 --single-branch --branch=$GQ_BRANCH $GQ_URL
