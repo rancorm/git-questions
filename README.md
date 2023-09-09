@@ -55,6 +55,14 @@ git init $GIT_REPO
 Running `git init` in an existing repository is safe. It will not overwrite things that
 are already there.
 
+### Clone existing repository
+
+To clone an already existing repository.
+
+```sh
+git clone $GIT_URL
+```
+
 ### Ignore files
 
 The repository file `.gitignore` is a configuration file used in Git repositories to specify
@@ -81,6 +89,14 @@ New local branch based on HEAD.
 git branch $GIT_BRANCH
 ```
 
+### Switch repository branch
+
+Switch repository branch.
+
+```sh
+git switch $GIT_BRANCH
+```
+
 ### Branch from an existing branch
 
 New local branch from existing branch.
@@ -98,7 +114,7 @@ you can provide the commit hash or tag name as the starting point.
 git branch $GIT_BRANCH $GIT_COMMIT
 ```
 
-### Branch from a remote repository
+### Push local branch to remote repository
 
 After working on your new local branch for some time, you might want to publish it in your
 remote repository, to share it with your team:
@@ -177,15 +193,45 @@ git commit -m "Message"
 ```
 
 You can make multiple commits before you push them to a remote, if the situation
-calls for it.
+calls for it. If you have too many commits you can squash them to keep the repository
+history clean.
 
-To have your changes available through remotes, you need to push them.
+### Show the working status
+
+To see what changes are staged for commit, untracked files, etc. Git `status` is where you
+will find that information.
+
+```sh
+git status -s
+```
+
+ Use the `-s` argument for short output with just change type (M, ??) and filename.
+
+## Collaboration & Remote Repositories
+
+### Pull changes
+
+Pull changes and merge remote repository or local branch.
+
+```sh
+git pull
+```
+
+### Fetch changes
+
+Fetch changes from remote repository but don't merge.
+
+```sh
+git fetch
+```
+
+### Update a remote repository
+
+To have your changes available through remotes, push them.
 
 ```sh
 git push
 ```
-
-## Collaboration & Remote Repositories
 
 ### List remote repositories
 
