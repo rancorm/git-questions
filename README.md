@@ -134,7 +134,7 @@ The `-u` or `--set-upstream` tells Git to establish a tracking reference, which 
 
 Commands you will use throughout the development day.
 
-### Add file or changes to commit
+### Stage file or changes for commit
 
 To track a file or add changes that are yet apart of a commit.
 
