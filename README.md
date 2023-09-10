@@ -1,8 +1,10 @@
+# Git Questions
+
 ![Cover Image](cover.jpg)
 
 Illustration by [Muhammad Ribkhan](https://www.vecteezy.com/members/khan-zein554159)
 
-# Git Questions
+---
 
 An extensive collection of meticulously curated Git questions and answers. Concepts like branching, merging, and committing to advanced topics such as rebasing, cherry-picking, and submodules, we've got you covered.
 
@@ -159,7 +161,7 @@ modified but not yet staged.
 
 ### What revision last modified a line of a file
 
-If you're looking for the revision and author that last modified each line of a 
+If you're looking for the revision and author that last modified each line of a
 file, the `git blame` command does exactly that.
 
 ```sh
