@@ -85,9 +85,9 @@ build/
 Whether you're working by yourself or on a team, you should have a repository work flow
 that involves merging branches. Feature branches, long term release branches, etc.
 
-### Branch
+### Make a branch
 
-New local branch based on HEAD.
+New local branch based on `HEAD`.
 
 ```sh
 git branch $GQ_BRANCH
