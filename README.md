@@ -296,6 +296,20 @@ Change conflict style to zealous diff3, `zdiff3`.
 merge.conflictStyle = zdiff3
 ```
 
+### Make and use aliases
+
+To make multiple step dependent tasks easier, turn them into aliases or scripts called by and alias. For example,
+the script [update-repos.sh](/scripts/update-repos.sh) can be used to perform a pull on multiple directores. Make an alias for convenience.
+
+```ini
+alias.update-repos = '!update-repos.sh'
+```
+
+```bash
+$ git update-repos
+Pull for ./questions...
+```
+
 ## Continuous Integration & Deployment
 
 Shallow clones aren't recommended for developers.
