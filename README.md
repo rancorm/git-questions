@@ -29,7 +29,7 @@ Pull requests are welcome.
 
 ## Setting Up
 
-To make copy and pasting easier, set the environment variable `GIT_URL` and friends to their respective
+To make copy and pasting easier, set the environment variable `GQ_URL` and friends to their respective
 values.
 
 Example:
@@ -130,6 +130,24 @@ git push -u origin $GQ_BRANCH
 The `-u` or `--set-upstream` tells Git to establish a tracking reference, which argument-less
 **git-pull** and other commands make use.
 
+### What branches have or have not merged
+
+To get a list of branches that have been merged into the current branch.
+
+```sh
+git branch --merged $GQ_COMMIT
+```
+
+To get a list of branches that have not been merged use `--no-merged`.
+
+### Merge branch
+
+To merge changes from another branch into the current branch.
+
+```sh
+git merge $GQ_BRANCH
+```
+
 ## Workflow
 
 Commands you will use throughout the development day.
@@ -144,7 +162,8 @@ git add $GQ_FILE
 
 ### Unstage a file or directory
 
-If you need to remove a file from the staging area.
+If you need to remove a file from the staging area without removing to local file, maybe
+you `git add` a file by accident and need to remove it.
 
 ```sh
 git reset HEAD -- $GQ_FILE
@@ -240,7 +259,7 @@ git pull
 
 ### Fetch changes
 
-Fetch changes from remote repository but don't merge.
+Fetch changes from remote repository but don't merge them.
 
 ```sh
 git fetch
@@ -307,7 +326,7 @@ alias.update-repos = '!update-repos.sh'
 
 ```bash
 $ git update-repos
-Pull for ./questions...
+Pull for ./git-questions...
 ```
 
 ## Continuous Integration & Deployment
