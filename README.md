@@ -44,6 +44,7 @@ export GQ_FILE=file.txt
 export GQ_DIR=a_directory/
 ```
 
+
 ## Basics
 
 Setup new repostories, clone existing ones, and just getting to know Git.
@@ -79,6 +80,7 @@ Example that excludes C objects (.o), Python compiled bytecode (.pyc), and direc
 *.o
 build/
 ```
+
 
 ## Branch & Merge
 
@@ -147,6 +149,7 @@ To merge changes from another branch into the current branch.
 ```sh
 git merge $GQ_BRANCH
 ```
+
 
 ## Workflow
 
@@ -247,6 +250,7 @@ git status -s
 
  Use the `-s` argument for short output with just change type (M, ??) and filename.
 
+
 ## Collaboration & Remote Repositories
 
 ### Pull changes
@@ -281,6 +285,7 @@ To list the set of repositories and their location.
 git remote -v
 ```
 
+
 ## Advanced Topics
 
 Rebasing, cherry-picking, and managing submodules.
@@ -293,6 +298,23 @@ Clone a repository and submodules. *2.13+*
 git clone --recurse-submodules $GQ_URL
 ```
 
+### List of untracked files in working tree
+
+Files that are not in the index and outside .gitignore rules. 
+
+```sh
+ git ls-files -o --exclude-standard
+```
+
+### Show current configuration with scope
+
+To display the current git configuration with scope details.
+
+```sh
+git config -l --show-scope | cat
+```
+
+
 ## Best Practices
 
 - Commit messages should being with a short description of 50 character limit on the first line. Followed
@@ -301,13 +323,16 @@ by a single blank line with each following line a description of the changes in 
 - Always pull from related branches before you start new work on your code. It will keep your
 branch up-to-date and reduce the chances of conflicts.
 
+
+
 ## Tools & Extensions
 
 - [Meld](https://meldmerge.org)
 
+
 ## Tips & Troubleshooting
 
-### Change Conflict Style
+### Change conflict style
 
 Change conflict style to zealous diff3, `zdiff3`.
 
@@ -329,6 +354,7 @@ $ git update-repos
 Pull for ./git-questions...
 ```
 
+
 ## Continuous Integration & Deployment
 
 Shallow clones aren't recommended for developers.
@@ -349,5 +375,6 @@ Perform the same shallow only on a specific branch.
 ```sh
 git clone --depth=1 --single-branch --branch=$GQ_BRANCH $GQ_URL
 ```
+
 
 ## Security & Access Control
