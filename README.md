@@ -14,18 +14,17 @@ Pull requests are welcome.
 
 ## Table of Contents
 
-- [Git Questions](#git-questions)
-  - [Setting Up](#setting-up)
-  - [Basics](#basics)
-  - [Branch & Merge](#branch--merge)
-  - [Workflow](#workflow) 
-  - [Collaboration & Remote Repositories](#collaboration--remote-repositories)
-  - [Advanced Topics](#advanced-topics)
-  - [Best Practices](#best-practices)
-  - [Tools & Extensions](#tools--extensions)
-  - [Tips & Troubleshooting](#tips--troubleshooting)
-  - [Continuous Integration & Deployment](#continuous-integration--deployment)
-  - [Security & Access Control](#security--access-control)
+- [Setting Up](#setting-up)
+- [Basics](#basics)
+- [Branch & Merge](#branch--merge)
+- [Workflow](#workflow) 
+- [Collaboration & Remote Repositories](#collaboration--remote-repositories)
+- [Advanced Topics](#advanced-topics)
+- [Best Practices](#best-practices)
+- [Tools & Extensions](#tools--extensions)
+- [Tips & Troubleshooting](#tips--troubleshooting)
+- [Continuous Integration & Deployment](#continuous-integration--deployment)
+- [Security & Access Control](#security--access-control)
 
 ## Setting Up
 
