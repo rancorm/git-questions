@@ -249,6 +249,22 @@ git status -s
 
  Use the `-s` argument for short output with just change type (M, ??) and filename.
 
+### Stash working directory and index changes
+
+If you would like to stash the current working directory and index changes to work on later or
+commit at a later time. Use the `git stash` command to bring the repository back to `HEAD`.
+
+```sh
+git stash
+```
+
+### Restoring stash changes
+
+Restore stash changes by applying them to the current working directory.
+
+```sh
+git stash apply
+```
 
 ## Collaboration & Remote Repositories
 
@@ -327,6 +343,8 @@ branch up-to-date and reduce the chances of conflicts.
 ## Tools & Extensions
 
 - [Meld](https://meldmerge.org)
+- [GitHub Desktop](https://desktop.github.com)
+- [Magit](https://magit.vc)
 
 
 ## Tips & Troubleshooting
