@@ -102,6 +102,12 @@ Switch repository branch.
 git switch $GQ_BRANCH
 ```
 
+Shortcut to create and switch to a branch in a single command.
+
+```sh
+git switch -c $GQ_BRANCH
+```
+
 ### Branch from an existing branch
 
 New local branch from existing branch.
