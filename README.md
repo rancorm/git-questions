@@ -156,6 +156,30 @@ git merge $GQ_BRANCH
 ```
 
 
+## Tags
+
+### Add annotated tag
+
+Annotated tags are stored as objects in the repository. They’re checksummed; contain the tagger name,
+email, and date; have a message; and can be signed and verified.
+
+It’s recommended to create annotated tags to have this information; but if you want a temporary tag,
+lightweight tags are available too.
+
+```sh
+git tag -a v1.0 -m "Version 1.0"
+```
+
+### List tags
+
+Search for tags that match a particular pattern. If you’re interested only in looking at the 1.0 release
+tags, run this:
+
+```sh
+$ git tag -l "v1.*"
+```
+
+
 ## Workflow
 
 Commands you will use throughout the development day.
@@ -216,7 +240,7 @@ The output is given in reverse chronological order.
 
 ```sh
 commit 0113f8d73745c3cda3a32360772f6055828012d3 (HEAD -> main, origin/main, origin/HEAD)
-Author: Jonathan Cormier <jonathan@cormier.co>
+Author: Jonathan Cormier <jonathan@example.net>
 Date:   Sun Sep 3 22:05:35 2023 -0300
 ```
 
@@ -264,13 +288,21 @@ commit at a later time. Use the `git stash` command to bring the repository back
 git stash
 ```
 
-### Restoring stash changes
-
-Restore stash changes by applying them to the current working directory.
+This can be done multiple times, if you want to make changes and stash those you can. List the
+current stashes.
 
 ```sh
-git stash apply
+git stash list
 ```
+
+### Restoring stash changes
+
+Restore top stash by applying it to the current working directory and then removing it.
+
+```sh
+git stash pop
+```
+
 
 ## Collaboration & Remote Repositories
 
