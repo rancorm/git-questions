@@ -155,6 +155,16 @@ To merge changes from another branch into the current branch.
 git merge $GQ_BRANCH
 ```
 
+If you would like to keep the repository history clean of the commits from the merging
+branch, you can use the `--squash` argument to squash the commits to a single commit and
+stage. Allowing for commit message and merge conflict changes.
+
+```sh
+git merge --squash $GQ_BRANCH
+```
+
+When done [push](#update-a-remote-repository) the changes to the remote.
+
 
 ## Tags
 
