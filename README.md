@@ -361,6 +361,13 @@ Clone a repository and submodules. *2.13+*
 git clone --recurse-submodules $GQ_URL
 ```
 
+Performance optimization that is available in *2.8* to set the number of submodules to fetch at
+the same time use `-j` or `--jobs`. Defaults to the `submodule.fetchJobs` option.
+
+```sh
+git clone --recurse-submodules -j8 $GQ_URL
+```
+
 ### List of untracked files in working tree
 
 Files that are not in the index and outside .gitignore rules. 
