@@ -348,6 +348,14 @@ To list the set of repositories and their location.
 git remote -v
 ```
 
+### Change remote location
+
+Change the URL of a remote repository.
+
+```sh
+git remote set-url origin $GQ_NEW_URL
+```
+
 
 ## Advanced Topics
 
