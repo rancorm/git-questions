@@ -392,6 +392,14 @@ To display the current git configuration with scope details.
 git config -l --show-scope | cat
 ```
 
+### Remove untracked files
+
+To remove all untracked files in a repository, you can use the following command:
+
+```sh
+git clean -fd
+```
+
 
 ## Best Practices
 
