@@ -416,7 +416,7 @@ branch up-to-date and reduce the chances of conflicts.
 - [Meld](https://meldmerge.org)
 - [GitHub Desktop](https://desktop.github.com)
 - [Magit](https://magit.vc)
-
+- [git-interactive-rebase-tool](https://github.com/MitMaro/git-interactive-rebase-tool)
 
 ## Tips & Troubleshooting
 
