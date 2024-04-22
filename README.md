@@ -80,6 +80,7 @@ Example that excludes C objects (.o), Python compiled bytecode (.pyc), and direc
 build/
 ```
 
+Head to [gitignore.io](https://www.toptal.com/developers/gitignore/) to get `.gitignore` entries for your project.
 
 ## Branch & Merge
 
@@ -235,6 +236,35 @@ If you would like to limit the output to a line range use the `-L` argument.
 git blame -L 26,28
 ```
 
+Other useful options to the `git blame` command. To ignore whitespace include `-w`, which
+a lot of web UI don't do by default. To detect lines moved or copied in the same commit
+include `-C`, or in the commit that created the file and another `-C`, or in any commit
+at all include another `-C`.
+
+```
+git blame -w -CCC
+```
+
+### Show me the differences
+
+To view the changes that are yet to be staged, use the `git diff` command with no switches.
+
+```
+git diff
+```
+
+If you already staged your changes, you can view those changes by adding `--cached` switch.
+
+```
+git diff --cached
+```
+
+If you want to diff on words vs lines you can by adding `--word-diff` switch.
+
+```
+git diff --word-diff
+```
+
 ### Looking through repository history
 
 To pick through the repository commit history use `git log`.
@@ -265,6 +295,17 @@ git log HEAD ^origin
 ```
 
 `HEAD` is a reference to the latest commit in the repository.
+
+### Searching through repository history
+
+If you would like to search through the repository log, you can use `git log -S` and
+suppy it a regular expression for filtering.
+
+```
+git log -S $GQ_REGEXP
+```
+
+If you want to see the revisions include the `-p` switch.
 
 ### Commit changes
 
@@ -304,6 +345,8 @@ current stashes.
 ```sh
 git stash list
 ```
+
+Include the switch `--all` to include untracked files.
 
 ### Restoring stash changes
 
@@ -417,6 +460,7 @@ branch up-to-date and reduce the chances of conflicts.
 - [GitHub Desktop](https://desktop.github.com)
 - [Magit](https://magit.vc)
 - [git-interactive-rebase-tool](https://github.com/MitMaro/git-interactive-rebase-tool)
+- [Lazygit](https://github.com/jesseduffield/lazygit)
 
 ## Tips & Troubleshooting
 
